@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Subscribe</title>
+	<link rel="stylesheet" type="text/css" href="badui.css">
+</head>
+<body>
+<div id="test">
+<form action="javascript:unsubscribe()">
+<h1>Subscribe to CatCorp™</h1>
+<span>To confirm you are human, please <b>find</b> the Subscribe button somewhere in this page.</span><br>
+<span><strong>WARNING: </strong>The button may be hiding behind this form.</span><br>
+<label for="en">Please choose the emails you'd want to recieve:</label><br>
+<label class="check">
+<input type="checkbox"><span>Daily cat pictures</span><br>
+<input type="checkbox"><span>Take Care of Your Cat</span><br>
+<input type="checkbox"><span>Cool Cat Facts</span><br>
+<input type="checkbox"><span>Exclusive offers</span><br>
+</label>
+<input class="button" id="button" type="submit" value="Subscribe">
+</form>
+</div>
+<script>
+document.getElementById("button").style.left = Math.random()*90+"%";
+document.getElementById("button").style.top = Math.random()*90+"%";
+function unsubscribe() {
+	document.getElementById("test").innerHTML = `<span>Thank you for subscribing! (meow)</span><br>
+	<span>Click <a href="badui.html">here</a> to unsubscribe.</span>`;
+}
+</script>
+</body>
+</html>
